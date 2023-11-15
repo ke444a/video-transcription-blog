@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "speech-transcriber-81b11"
+  }
+}
