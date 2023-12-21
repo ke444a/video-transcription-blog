@@ -61,8 +61,7 @@ export const onAudioFileUploaded = onObjectFinalized({bucket: "audio-files-432e"
     const metadata = file.metadata as { uploadId: string; };
     const tmpFilePath = path.join(os.tmpdir(), file.name);
     await audioBucket.file(file.name).download({destination: tmpFilePath});
-    fs.createReadStream(tmpFilePath);
-
+    
     const transcription = await openai.audio.transcriptions.create({
         file: fs.createReadStream(tmpFilePath),
         model: "whisper-1",
