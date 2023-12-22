@@ -13,15 +13,11 @@ type Props = {
 const Transcript = ({ id, setLoading }: Props) => {
     const [transcript, setTranscript] = useState<string>();
     useEffect(() => {
-        onValue(ref(db, "transcripts"), (snapshot) => {
+        onValue(ref(db, "transcripts/" + id), (snapshot) => {
             if (snapshot.exists()) {
-                const data = snapshot.val();
-                Object.entries(data).forEach(([key, value]) => {
-                    if (key === id) {
-                        setTranscript((value as { transcript: string }).transcript);
-                        setLoading(false);
-                    }
-                });
+                const data = snapshot.val() as { transcript: string };
+                setTranscript(data.transcript);
+                setLoading(false);
             }
         });
     }, [id, setLoading]);
