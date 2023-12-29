@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Video transcription app
 
-## Getting Started
+## Description
+This is a Next.js application that makes use of Firebase and OpenAI API to transcribe any uploaded video. The user uploads the video to the application, which is then uploaded to Firebase storage. The application then sends the video to the Whisper API by OpenAI, which transcribes the video and returns the transcription. The app backend runs on Firebase Cloud Functions.<br /><br /> 
 
-First, run the development server:
+This project is motivated by my technical blog hosted on [Hashnode](https://blog.danylkecha.com). I have released a blog post that offers a detailed step-by-step guide covering every aspect of the project. You can check it out here: https://blog.danylkecha.com/video-transcription-ai <br /><br />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contact
+- LinkedIn: [Danyl Kecha](https://www.linkedin.com/in/danylkecha/)
+- Mail: danyl.kecha.uk@gmail.com
+- GitHub: [ke444a](https://github.com/ke444a)
+- Twitter: [@ke444a](https://twitter.com/ke444a)
+- Hashnode: [blog.danylkecha.com](https://blog.danylkecha.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
